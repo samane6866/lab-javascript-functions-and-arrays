@@ -14,52 +14,104 @@ const shuffle = (currentArray) => {
 
 
 
-describe('Find the maximum', () => {
-  it('should declare a function named maxOfTwoNumbers', () => {
-    expect(typeof maxOfTwoNumbers).toBe('function');
-  });
+// describe('Find the maximum', () => {
+//   it('should declare a function named maxOfTwoNumbers', () => {
+//     expect(typeof maxOfTwoNumbers).toBe('function');
+//   });
 
-  it('should return greater of two arguments - if the first argument greater', () => {
-    expect(maxOfTwoNumbers(2, 1)).toBe(2);
-    expect(maxOfTwoNumbers(5, -7)).toBe(5);
-  });
+// iteration1
 
-  it('should return greater of two arguments - if the second argument greater', () => {
-    expect(maxOfTwoNumbers(1, 3)).toBe(3);
-    expect(maxOfTwoNumbers(-5, 3)).toBe(3);
-  });
-
-  it('should return either arguments - if both arguments are equal', () => {
-    expect(maxOfTwoNumbers(4, 4)).toBe(4);
-  });
-});
-
-describe('Find the longest word', () => {
-  it('should declare a function named findLongestWord', () => {
-    expect(typeof findLongestWord).toBe('function');
-  });
-
-  it('should return null when called with an empty array', () => {
-    expect(findLongestWord([])).toBe(null);
-  });
-
-  it('should return the word when called with a single-word array', () => {
-    expect(findLongestWord(['foo'])).toBe('foo');
-  });
-
-  it('should return the first occurrence of the word when longest have multiple occurrences ', () => {
-    expect(findLongestWord(['foo', 'bar'])).toBe('foo');
-    expect(findLongestWord(['bar', 'foo'])).toBe('bar');
-  });
-
-  it('should return the longest occurrence when it has multiple words', () => {
-    let words = ['a', 'zab', '12abc', '$$abcd', 'abcde', 'ironhack'];
-    for (let i = 0; i < 10; i++) {
-      words = shuffle(words);
-      expect(findLongestWord(words)).toBe('ironhack');
+  function maxOfTwoNumbers(num1, num2) {
+    if (num1 === num2) { 
+      return num1;
+    } else if (num1 > num2) {
+      return num1;
+    } else {
+      return num2;
     }
-  });
-});
+  }
+console.log(maxOfTwoNumbers(3, 6));
+
+
+// iteration2
+const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+  
+function findLongestWord(wordArray) {
+  let finalword;
+  let maxLength = 0;
+  if (wordArray == 0) return null;
+  for (let word = 0; word < wordArray.length; word++) {
+    return finalword;
+  }
+  console.log (findLongestWord(words))
+}
+
+// iteration3.1
+const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+function sumNumbers(numbers){
+
+let  totalSumNum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+  totalSumNum += numbers[i];
+}
+return totalSumNum;
+}
+console.log(sumNumbers(numbers));
+
+// iteration3.2
+
+
+// iteration4
+
+
+
+
+
+
+
+//   it('should return greater of two arguments - if the first argument greater', () => {
+//     expect(maxOfTwoNumbers(2, 1)).toBe(2);
+//     expect(maxOfTwoNumbers(5, -7)).toBe(5);
+//   });
+
+//   it('should return greater of two arguments - if the second argument greater', () => {
+//     expect(maxOfTwoNumbers(1, 3)).toBe(3);
+//     expect(maxOfTwoNumbers(-5, 3)).toBe(3);
+//   });
+
+//   it('should return either arguments - if both arguments are equal', () => {
+//     expect(maxOfTwoNumbers(4, 4)).toBe(4);
+//   });
+// });
+
+// describe('Find the longest word', () => {
+//   it('should declare a function named findLongestWord', () => {
+//     expect(typeof findLongestWord).toBe('function');
+//   });
+
+//   it('should return null when called with an empty array', () => {
+//     expect(findLongestWord([])).toBe(null);
+//   });
+
+//   it('should return the word when called with a single-word array', () => {
+//     expect(findLongestWord(['foo'])).toBe('foo');
+//   });
+
+//   it('should return the first occurrence of the word when longest have multiple occurrences ', () => {
+//     expect(findLongestWord(['foo', 'bar'])).toBe('foo');
+//     expect(findLongestWord(['bar', 'foo'])).toBe('bar');
+//   });
+
+//   it('should return the longest occurrence when it has multiple words', () => {
+//     let words = ['a', 'zab', '12abc', '$$abcd', 'abcde', 'ironhack'];
+//     for (let i = 0; i < 10; i++) {
+//       words = shuffle(words);
+//       expect(findLongestWord(words)).toBe('ironhack');
+//     }
+//   });
+// });
 
 describe('Calculate the sum of array of numbers', () => {
   it('should declare a function named sumNumbers', () => {
